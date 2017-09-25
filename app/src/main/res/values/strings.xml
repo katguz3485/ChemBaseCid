@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ChemBase</string>
+    <string name="chemBase_title">ChemBase</string>
+    <string name="contacts_title">SearchProperties</string>
+    <string name="chemicals_title">Chemicals</string>
+    <string name="database_search">Database</string>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="error_message">Check your internet connection</string>
+    <string name="cidNumberInput">Enter your cid value</string>
+</resources>

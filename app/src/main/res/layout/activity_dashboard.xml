@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/dashboard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize" />
+
+        <ProgressBar
+            android:id="@+id/dashboard_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+  <!--  <EditText
+            android:id="@+id/cidNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="Type cid Number" />
+
+        <Button
+            android:id="@+id/dataDownload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Download Compound Data"
+            android:layout_below="@id/cidNumber"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="71dp" />&ndash;&gt;-->
+
+        <EditText
+            android:id="@+id/cidNumberInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:gravity="clip_vertical"
+            android:hint="@string/cidNumberInput"
+            android:layout_below="@+id/dashboard_toolbar"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/cidNumberSubmit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cidNumberInput"
+            android:layout_centerHorizontal="true"
+            android:gravity="clip_vertical"
+            android:text="Query"
+            android:textAlignment="center"
+            />
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/dashboard_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/dashboard_menu" />
+
+</android.support.v4.widget.DrawerLayout>

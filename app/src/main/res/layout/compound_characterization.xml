@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewCompoundsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="CompoundsName"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:id="@+id/textViewCompoundsFormula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Formula"
+        android:layout_below="@+id/textViewCompoundsName"
+        />
+
+    <TextView
+        android:id="@+id/textViewCompoundsMass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="MolecularMass"
+        android:layout_below="@+id/textViewCompoundsFormula"
+        />
+
+    <TextView
+        android:id="@+id/textViewCompoundsCid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="CidNumber"
+        android:layout_below="@+id/textViewCompoundsMass"
+        />
+
+    <TextView
+        android:id="@+id/textViewCompoundsInChI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textViewCompoundsCid"
+        android:layout_marginTop="21dp"
+        android:text="InChINumber"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewCompoundsPNG"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@mipmap/ic_launcher_round"
+        android:layout_below="@+id/textViewCompoundsInChI"
+        android:layout_centerHorizontal="true" />
+
+   <!-- <Button
+        android:id="@+id/buttonSaveCompoundToLocalDb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewCompoundsPNG"
+        android:layout_marginBottom="11dp"
+        android:text="Sava Compound to Local DataBase"
+        />-->
+
+    <!--    <Button
+            android:id="@+id/buttonGoToLocalDb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonSaveCompoundToLocalDb"
+            android:layout_marginBottom="11dp"
+            android:text="Go To Your Compounds"
+    />-->
+</RelativeLayout>
