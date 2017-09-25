@@ -67,7 +67,7 @@
             android:layout_below="@+id/cidNumberInput"
             android:layout_centerHorizontal="true"
             android:gravity="clip_vertical"
-            android:text="Query"
+            android:text="Save value"
             android:textAlignment="center"
             />
     </RelativeLayout>

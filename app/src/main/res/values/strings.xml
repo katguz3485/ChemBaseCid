@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ChemBase</string>
-    <string name="chemBase_title">ChemBase</string>
+    <string name="chemBase_title">Query Again</string>
     <string name="contacts_title">SearchProperties</string>
     <string name="chemicals_title">Chemicals</string>
     <string name="database_search">Database</string>

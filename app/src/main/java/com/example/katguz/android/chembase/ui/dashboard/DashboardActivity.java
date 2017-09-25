@@ -23,7 +23,7 @@ import com.example.katguz.android.chembase.App;
 import com.example.katguz.android.chembase.R;
 import com.example.katguz.android.chembase.model.events.HideProgress;
 import com.example.katguz.android.chembase.model.events.ShowProgress;
-import com.example.katguz.android.chembase.ui.chembase.ChembaseFragment;
+import com.example.katguz.android.chembase.ui.chembase.NewQuery;
 import com.example.katguz.android.chembase.ui.chemicals.ChemicalsAdapter;
 import com.example.katguz.android.chembase.ui.chemicals.ChemicalsFragment;
 
@@ -85,7 +85,7 @@ public class DashboardActivity extends AppCompatActivity implements DashboardAct
 
         if (savedInstanceState == null) {
             showFragment(new ChemicalsFragment());
-            showFragment(new ChembaseFragment());
+            showFragment(new NewQuery());
 
         }
 
@@ -132,7 +132,7 @@ public class DashboardActivity extends AppCompatActivity implements DashboardAct
                         return true;
                     }
                     case R.id.menu_chembase: {
-                        showFragment(new ChembaseFragment());
+                        showFragment(new NewQuery());
                         return true;
                     }
 

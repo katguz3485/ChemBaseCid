@@ -74,6 +74,7 @@ public class ChemicalsPresenter {
 
                 } else {
                     view.showErrorMessage();
+                    EventBus.getDefault().post(new HideProgress());
                 }
                 EventBus.getDefault().post(new HideProgress());
 
