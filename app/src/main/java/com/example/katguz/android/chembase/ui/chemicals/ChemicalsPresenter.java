@@ -36,7 +36,9 @@ public class ChemicalsPresenter {
     public Context context;
 
     public ChemicalsPresenter(ApiClient apiClient) {
+
     }
+
 
     public void setAdapter(ChemicalsAdapter adapter) {
         this.adapter = adapter;
@@ -45,8 +47,6 @@ public class ChemicalsPresenter {
     @Inject
     public ChemicalsPresenter(ApiClient apiClient, PrefsManager prefsManager) {
         this.apiClient = apiClient;
-
-
         this.prefsManager = prefsManager;
     }
 

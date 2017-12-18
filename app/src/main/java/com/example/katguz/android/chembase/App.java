@@ -5,6 +5,7 @@ import android.app.Application;
 import com.example.katguz.android.chembase.di.AppComponent;
 import com.example.katguz.android.chembase.di.AppModule;
 import com.example.katguz.android.chembase.di.DaggerAppComponent;
+import com.facebook.stetho.Stetho;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -24,7 +25,7 @@ public class App extends Application {
         super.onCreate();
         initRealm();
         initDagger();
-      //  Stetho.initializeWithDefaults(this);
+        Stetho.initializeWithDefaults(this);
 
     }
 

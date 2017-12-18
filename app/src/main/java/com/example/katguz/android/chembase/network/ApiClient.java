@@ -24,10 +24,13 @@ public class ApiClient {
 
     public ApiClient(PrefsManager prefsManager) {
         createRetrofit(prefsManager);
+
     }
+
 
     public ApiService getService() {
         // Get service instance to invoke its methods
+
         return service;
     }
 
@@ -51,7 +54,6 @@ public class ApiClient {
                 return chain.proceed(request);
             }
         };
-
 
         // Add interceptors to OkHttpClient
         clientBuilder.addInterceptor(loggingInterceptor);

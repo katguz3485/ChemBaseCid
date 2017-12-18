@@ -3,6 +3,7 @@ package com.example.katguz.android.chembase.di;
 import android.content.Context;
 
 import com.example.katguz.android.chembase.network.ApiClient;
+import com.example.katguz.android.chembase.ui.chemicals.ChemicalsPresenter;
 import com.example.katguz.android.chembase.utils.PrefsManager;
 
 import javax.inject.Singleton;
@@ -42,7 +43,7 @@ public class AppModule {
     }
 
 
-   /* @Provides
+  /*  @Provides
     @Singleton
     ChemicalsPresenter providesPresenter(PrefsManager prefsManager) {
 

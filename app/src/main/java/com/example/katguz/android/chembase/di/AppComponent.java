@@ -10,7 +10,7 @@ import javax.inject.Singleton;
 @dagger.Component(modules = {AppModule.class})
 public interface AppComponent {
 
- void inject(DashboardActivity dashboardActivity);
+  void inject(DashboardActivity dashboardActivity);
 
   void inject(ChemicalsFragment chemicalsFragment);
 }

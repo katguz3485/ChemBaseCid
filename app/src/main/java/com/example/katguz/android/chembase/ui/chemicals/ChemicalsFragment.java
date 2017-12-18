@@ -41,7 +41,6 @@ public class ChemicalsFragment extends Fragment implements ChemicalsMvpView {
     @BindView(R.id.chemicals_recycler)
     RecyclerView recyclerView;
 
-
     private ChemicalsAdapter adapter;
 
 

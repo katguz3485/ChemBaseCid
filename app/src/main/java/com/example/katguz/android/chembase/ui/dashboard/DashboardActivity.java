@@ -48,15 +48,18 @@ public class DashboardActivity extends AppCompatActivity implements DashboardAct
     @Inject
     ChemicalsAdapter adapter;
 
-
     @BindView(R.id.dashboard_drawer)
     DrawerLayout drawer;
+
     @BindView(R.id.dashboard_toolbar)
     Toolbar toolbar;
+
     @BindView(R.id.fragment_container)
     FrameLayout container;
+
     @BindView(R.id.dashboard_progress)
     ProgressBar progress;
+
     @BindView(R.id.dashboard_nav)
     NavigationView navigationView;
 

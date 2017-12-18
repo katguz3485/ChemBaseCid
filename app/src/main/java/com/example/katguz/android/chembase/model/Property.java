@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by sda on 05.07.17.
  */
 
+
 public class Property {
 
     @SerializedName("CID")
@@ -77,4 +78,5 @@ public class Property {
         this.iUPACName = iUPACName;
     }
 }
+
 

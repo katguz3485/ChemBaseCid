@@ -13,6 +13,7 @@ public class PrefsManager {
     private static final String PREFS_KEY = "com.example.sda.retrofitapp.sharedprefs";
     //private static final String TOKEN_KEY = "token_key";
     private static final String CID_NUMBER_KEY = "cid_number_key";
+    private Context context;
 
     private SharedPreferences preferences;
 
@@ -21,25 +22,20 @@ public class PrefsManager {
     }
 
     public void saveUserQuery(String cidNumber) {
-
-            preferences.edit()
-                    .putString(CID_NUMBER_KEY, cidNumber)
-                    .commit();
+        preferences.edit()
+                .putString(CID_NUMBER_KEY, cidNumber)
+                .commit();
 
     }
+
     public String getUserCidValueQuery() {
         return preferences.getString(CID_NUMBER_KEY, "");
     }
 
-/*  public void saveToken(String token) {
-        preferences.edit()
-                .putString(TOKE345N_KEY, token)
-                .apply();
-    }
-    public String getToken() {
 
-        return preferences.getString(TOKEN_KEY, null);
-    }*/
+    public Context getContext() {
+        return context;
+    }
 
 }
 
