@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.katguz.android.chembase.App;
 import com.example.katguz.android.chembase.R;
@@ -180,6 +181,7 @@ public class DashboardActivity extends AppCompatActivity implements DashboardAct
 
     @Override
     public void showErrorMessage() {
-
+        Toast.makeText(this, getString(R.string.error_message)
+                , Toast.LENGTH_SHORT).show();
     }
 }

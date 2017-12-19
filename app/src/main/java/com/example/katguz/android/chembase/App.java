@@ -26,8 +26,11 @@ public class App extends Application {
         initRealm();
         initDagger();
         Stetho.initializeWithDefaults(this);
+        buildStetho();
+
 
     }
+
 
     public static App getInstance() {
         return instance;
@@ -46,6 +49,15 @@ public class App extends Application {
                 .appModule(new AppModule(this))
                 .build();
     }
+
+
+    private void buildStetho() {
+        Stetho.initialize(Stetho.newInitializerBuilder(this).
+                enableDumpapp(Stetho.defaultDumperPluginsProvider(this)).
+                enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this)).
+                build());
+    }
+
 
     public AppComponent getAppComponent() {
         return appComponent;

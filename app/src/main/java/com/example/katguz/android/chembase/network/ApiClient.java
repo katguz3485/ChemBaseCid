@@ -3,6 +3,7 @@ package com.example.katguz.android.chembase.network;
 
 import com.example.katguz.android.chembase.BuildConfig;
 import com.example.katguz.android.chembase.utils.PrefsManager;
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -56,6 +57,7 @@ public class ApiClient {
         };
 
         // Add interceptors to OkHttpClient
+        clientBuilder.networkInterceptors().add(new StethoInterceptor());
         clientBuilder.addInterceptor(loggingInterceptor);
         clientBuilder.addInterceptor(tokenInterceptor);
         // Set timeouts

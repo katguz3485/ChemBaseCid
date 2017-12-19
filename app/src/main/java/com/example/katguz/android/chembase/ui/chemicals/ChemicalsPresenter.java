@@ -64,7 +64,7 @@ public class ChemicalsPresenter {
         EventBus.getDefault().post(new ShowProgress());
         Log.e("Prefs Manager", prefsManager.getUserCidValueQuery());
 
-        apiClient.getService().getChemicalDatda(Integer.valueOf(prefsManager.getUserCidValueQuery())).enqueue(new Callback<Chemical>() {
+        apiClient.getService().getChemicalData(Integer.valueOf(prefsManager.getUserCidValueQuery())).enqueue(new Callback<Chemical>() {
             @Override
             public void onResponse(Call<Chemical> call, Response<Chemical> response) {
                 if (response.isSuccessful()) {
