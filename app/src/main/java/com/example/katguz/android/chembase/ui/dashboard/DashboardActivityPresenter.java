@@ -1,5 +1,7 @@
 package com.example.katguz.android.chembase.ui.dashboard;
 
+import android.annotation.SuppressLint;
+
 import com.example.katguz.android.chembase.network.ApiClient;
 import com.example.katguz.android.chembase.utils.PrefsManager;
 
@@ -31,12 +33,15 @@ class DashboardActivityPresenter {
     }
 
 
+    @SuppressLint("NewApi")
     public void setUpEditText(String cidNumber) {
         if (cidNumber.isEmpty() || (!cidNumber.matches("-?\\d+(\\.\\d+)?"))) {
             view.showErrorMessage();
         } else if (!cidNumber.equals(prefsManager.getUserCidValueQuery()) || cidNumber.equals(null)) {
             prefsManager.saveUserQuery(cidNumber);
-            // view.saveNumber(cidNumber);
+
         }
     }
+
+
 }

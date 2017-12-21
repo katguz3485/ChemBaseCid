@@ -27,8 +27,6 @@ public class App extends Application {
         initDagger();
         Stetho.initializeWithDefaults(this);
         buildStetho();
-
-
     }
 
 

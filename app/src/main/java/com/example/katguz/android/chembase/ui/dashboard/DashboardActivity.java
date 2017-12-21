@@ -7,18 +7,25 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.Toast;
+
 
 import com.example.katguz.android.chembase.App;
 import com.example.katguz.android.chembase.R;
@@ -67,14 +74,12 @@ public class DashboardActivity extends AppCompatActivity implements DashboardAct
     @BindView(R.id.cidNumberInput)
     EditText enteredCidNumber;
 
-
     @OnClick(R.id.cidNumberSubmit_button)
-    public void getCidNumberInput() {
+    public void getCidNumberInput(Button saveCidButton) {
         Log.d("Edit text", enteredCidNumber.getText().toString());
         presenter.setUpEditText(enteredCidNumber.getText().toString());
-
+        enteredCidNumber.getText().clear();
     }
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,7 +95,6 @@ public class DashboardActivity extends AppCompatActivity implements DashboardAct
         if (savedInstanceState == null) {
             showFragment(new ChemicalsFragment());
             showFragment(new NewQuery());
-
         }
 
     }
@@ -100,9 +104,43 @@ public class DashboardActivity extends AppCompatActivity implements DashboardAct
         EventBus.getDefault().unregister(this);
         presenter.detachView();
         super.onDestroy();
-
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.dashboard_menu, menu);
+        ButterKnife.bind(this);
+
+        //Prefs ?
+
+        MenuItem item = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                /*addToSharedPreferences(query);
+                getRestaurants(query);*/
+
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public void onBackPressed() {
@@ -181,7 +219,7 @@ public class DashboardActivity extends AppCompatActivity implements DashboardAct
 
     @Override
     public void showErrorMessage() {
-        Toast.makeText(this, getString(R.string.error_message)
+        Toast.makeText(this, getString(R.string.error_message1)
                 , Toast.LENGTH_SHORT).show();
     }
 }

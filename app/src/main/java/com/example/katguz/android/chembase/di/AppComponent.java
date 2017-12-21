@@ -13,4 +13,5 @@ public interface AppComponent {
   void inject(DashboardActivity dashboardActivity);
 
   void inject(ChemicalsFragment chemicalsFragment);
+
 }
